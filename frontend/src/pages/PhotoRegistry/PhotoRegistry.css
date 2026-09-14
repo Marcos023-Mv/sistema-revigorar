@@ -1,0 +1,130 @@
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.photo-main {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-soft);
+  border: 1px dashed var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  color: var(--color-text-faint);
+  margin-bottom: var(--space-3);
+}
+
+.photo-main__date {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.photo-thumbs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.photo-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-border);
+  background: var(--color-bg-soft);
+  color: var(--color-text-faint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-thumb.is-active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.photo-grid__add {
+  width: 100%;
+}
+
+.photo-compare {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.photo-compare__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.photo-compare__date {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.photo-compare__image {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-soft);
+  border: 1px dashed var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-faint);
+}
+
+.photo-history__title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.photo-history li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  padding: var(--space-2) 4px;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.photo-history li:hover {
+  background: var(--color-bg-soft);
+}
+
+.photo-history li:last-child {
+  border-bottom: none;
+}
+
+.photo-history__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.photo-grid__file-input {
+  display: none;
+}

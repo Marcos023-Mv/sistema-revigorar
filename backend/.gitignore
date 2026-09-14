@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+*.log
+
+# Arquivos enviados por usuários (fotos, documentos, backups gerados)
+uploads/
+
+# Cobertura de testes
+coverage/

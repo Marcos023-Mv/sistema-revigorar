@@ -1,0 +1,21 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.breadcrumb a {
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumb__sep {
+  margin: 0 4px;
+  color: var(--color-text-faint);
+}

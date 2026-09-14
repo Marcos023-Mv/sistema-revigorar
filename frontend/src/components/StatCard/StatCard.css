@@ -1,0 +1,51 @@
+.statcard {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.statcard__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-soft);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statcard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statcard__label {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.statcard__value {
+  font-size: var(--fs-lg);
+  color: var(--color-text);
+}
+
+.statcard__delta {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.statcard__delta--success { background: var(--color-success-soft); color: var(--color-success); }
+.statcard__delta--danger { background: var(--color-danger-soft); color: var(--color-danger); }

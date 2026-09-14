@@ -1,0 +1,119 @@
+.board-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.6fr auto;
+  gap: var(--space-4);
+  align-items: end;
+}
+
+.board-form__actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.board-column {
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.board-column__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.board-column__head h3 {
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+
+.board-column__head span {
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  padding: 2px 9px;
+  color: var(--color-text-muted);
+}
+
+.board-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.board-card--done {
+  opacity: 0.75;
+}
+
+.board-card__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.board-card__head strong {
+  font-size: var(--fs-sm);
+}
+
+.board-card__type {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.board-card p {
+  font-size: var(--fs-sm);
+}
+
+.board-card__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: 4px;
+}
+
+.board-card__actions .btn {
+  padding: 6px 12px;
+  font-size: var(--fs-xs);
+}
+
+.board-empty {
+  text-align: center;
+  font-size: var(--fs-xs);
+  padding: var(--space-4) 0;
+}
+
+@media (max-width: 900px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+  .board-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .board-form__description {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 500px) {
+  .board-form {
+    grid-template-columns: 1fr;
+  }
+}
